@@ -1,0 +1,117 @@
+/* Modal Classes */
+.modal-background {
+  /* width: 100%;
+  height: 100%; */
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: block;
+}
+.modal-bg {
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 1050;
+}
+
+.modal-content {
+  width: 80%;
+  height: auto;
+  position: fixed;
+  background-color: white;
+  border-radius: 2px;
+  display: block;
+  z-index: 1100;
+  
+}
+
+.slide-down {
+  -webkit-animation: slide-down .5s ease-out;
+    -moz-animation: slide-down .5s ease-out;
+}
+
+.slide-up {
+  -webkit-animation: slide-up .5s ease-out;
+    -moz-animation: slide-up .5s ease-out;
+}
+
+.show {
+  display: flex;
+}
+
+.fade {
+  transition: opacity 0.6s linear;
+}
+
+.modal-hidden {
+  display: none;
+}
+
+.close-icon {
+  color: #000;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  height: 24px;
+  margin-right: 0.3rem;
+}
+
+.close-icon:hover {
+  color: #aaa;
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  height: auto;
+  padding: 1rem;
+}
+
+.modal-header {
+  width: 100%;
+  height: 2rem;
+}
+
+.header-text {
+  float: left;
+  font-weight: 600;
+  margin: 0.5rem 0 0 1rem;
+}
+
+.modal-footer {
+  height: 3rem;
+}
+
+.modal-btn {
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0.6rem;
+}
+
+@-webkit-keyframes slide-down {
+  0% { opacity: 0; -webkit-transform: translateY(-100%); }   
+100% { opacity: 1; -webkit-transform: translateY(0); }
+}
+@-moz-keyframes slide-down {
+  0% { opacity: 0; -moz-transform: translateY(-100%); }   
+100% { opacity: 1; -moz-transform: translateY(0); }
+}
+
+@-webkit-keyframes slide-up {
+  0% { opacity: 0; -webkit-transform: translateY(0); }   
+100% { opacity: 1; -webkit-transform: translateY(-100%); }
+}
+@-moz-keyframes slide-up {
+  0% { opacity: 0; -moz-transform: translateY(0); }   
+100% { opacity: 1; -moz-transform: translateY(-100%); }
+}

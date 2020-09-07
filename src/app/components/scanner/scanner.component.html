@@ -1,0 +1,23 @@
+<div class="qr-scan-area">
+    <!-- This is the npm package in-charge of scanning the QR -->
+    <zxing-scanner
+      #scanner
+      [(device)]="currentDevice"
+      (scanSuccess)="onCodeResult($event)"
+      (permissionResponse)="onHasPermission($event)"
+    ></zxing-scanner>
+    <div class="qr-area">
+      <div class="area"></div>
+    </div>
+  </div>
+  <div class="align-center stick-bottom btm-100 w-100">
+    <button class="btn btn-danger btn-lg" (click)="close()">Close</button>
+  </div>
+
+  <!-- Toast Message -->
+  <div class="stick-top w-100 dflex" *ngIf="qrTxt">
+      <div class="alert alert-success alert-dismissible fade w-60">
+          {{ toastTxt }}
+          <button type="button" class="close" (click)="closeAlert()">×</button>
+      </div>
+  </div>

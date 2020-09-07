@@ -1,0 +1,29 @@
+<div class="align-center default-margin">
+    <!-- <h4>Order Details</h4> -->
+    <span class="label-sm ">Order Id: (<strong>{{ orderId$ | async }}</strong>)</span>
+    <hr>
+</div>
+
+<div class="dflex mt-1" *ngIf="order$ | async as order">
+    <div class="col-sm align-center">
+        <div class="item">
+            <label for="" class="label-txt">Customer Name</label>
+            <p class="label-val">{{ order.name }}</p>
+        </div>
+        <div class="item">
+            <label for="" class="label-txt">Customer Id</label>
+            <p class="label-val">{{ order.cid }}</p>
+        </div>
+
+    </div>
+    <div class="col-sm align-center">
+        <div class="item">
+            <label for="" class="label-txt">Customer Phone</label>
+            <p class="label-val">{{ order.contact }}</p>
+        </div>
+    </div>
+</div>
+<div class="align-center stick-bottom btm-2 w-100">
+    <button class="btn btn-primary btn-lg" (click)="goBack()">Back</button>
+    <button class="btn btn-danger btn-lg ml-1" (click)="cancelOrder()">Cancel</button>
+</div>

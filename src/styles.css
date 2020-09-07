@@ -1,1 +1,255 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.dflex {
+    display: flex;
+    justify-content: center;
+}
+
+.stick-bottom {
+    position: fixed;
+    bottom: 0;
+}
+
+.btm-100 {
+    bottom: 100px;
+}
+
+.btm-2 {
+    bottom: 2rem;
+}
+
+.stick-top {
+    position: fixed;
+    top: 30px;
+}
+
+/* Background color */
+.bg-blue {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Column Classes */
+.col-md {
+    width: 33%;
+}
+
+.col-sm {
+    width: 45%;
+}
+
+/* Block Classes */
+.item {
+    padding: 10px;
+}
+
+/* Label Classes */
+.label-txt {
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.54);
+}
+.label-val {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 0.6rem;
+}
+.label-sm {
+    font-size: 0.8rem;
+    margin-top: 0.6rem;
+}
+
+hr {
+    width: 80%;
+}
+
+
+/* Button Classes */
+.btn {
+    font-size: 14px;
+    padding: 6px 12px;
+    margin-bottom: 0;
+
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+}
+.btn:hover,
+.btn:focus {
+    color: #555;
+    text-decoration: none;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+.btn-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+.btn-danger:hover {
+    color: #fff;
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+.btn-lg {
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .1rem;
+}
+button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+}
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+.btn:disabled {
+    opacity: .65;
+}
+.btn-secondary:disabled {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+.btn-primary:disabled {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+
+/* Margin Classes */
+.mt-1 {
+    margin-top: 1rem;
+}
+.mt-2 {
+    margin-top: 2rem;
+}
+.ml-1 {
+    margin-left: 1rem;
+}
+.default-margin {
+    margin-top: 70px;
+}
+
+
+/* Stick Bar */
+.stick-bar {
+    line-height: 1.8rem;
+}
+
+
+/* Alignment classes */
+.align-center {
+    text-align: center;
+}
+
+/* Width Classes */
+.w-100 {
+    width: 100%;
+}
+.w-60 {
+    width: 60%;
+}
+
+/* Toast Classes */
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.alert-dismissible {
+    padding-right: 4rem;
+}
+.alert-dismissible .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .75rem 1.25rem;
+    color: inherit;
+}
+.fade {
+    transition: all .15s linear;
+}
+
+/* Loader */
+.loading:before{width:100%;height:100%;content:'';background:rgba(0,0,0,.7);position:fixed;z-index:9999}
+.loading:after{width:3.5rem;height:3.5rem;content:'';position:absolute;z-index:9999;top:50%;left:50%;margin:-1.25rem 0 0 -1.25rem;border:6px solid #1d8836;border-radius:50%;border-top-color:transparent;animation:rotate .9s linear infinite}
+
+/* Media Queries */
+@media only screen and (max-width: 560px) {
+    .col-md {
+        width: 66%;
+    }
+}
+
+
+.modal-background {
+  /* width: 100%;
+  height: 100%; */
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: block;
+}

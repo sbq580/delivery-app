@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="col-md">
+    <div class="align-center">
+      <button class="btn btn-primary btn-lg" (click)="initiate()" [disabled]="orderId">Initiate Delivery</button>
+    </div>
+    <div class="mt-2 align-center">
+      <button class="btn btn-secondary btn-lg" (click)="close()" [disabled]="!orderId">Close Delivery</button>
+    </div>
+    <div class="mt-2 align-center" *ngIf="orderId">
+      <button class="btn btn-secondary btn-lg" (click)="goTo('order')">Order Details</button>
+    </div>
+  </div>
+</div>
+  <!-- Toast Message -->
+  <div class="stick-top w-100 dflex" *ngIf="successTxt">
+    <div class="alert alert-success alert-dismissible fade w-60">
+        {{ successTxt }}
+        <button type="button" class="close" (click)="closeAlert()">×</button>
+    </div>
+</div>
+
+<div class="stick-bottom w-100 bg-blue align-center" *ngIf="orderId; else noActiveOrder">
+  <span>Active Order: <strong>{{ orderId }}</strong></span>
+</div>
+
+<ng-template #noActiveOrder>
+  <div class="stick-bottom w-100 bg-blue align-center">
+    <span class="stick-bar">No active orders</span>
+  </div>
+</ng-template>
